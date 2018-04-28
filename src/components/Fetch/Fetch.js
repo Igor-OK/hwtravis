@@ -57,7 +57,7 @@ export const Fetch = connect(stateToProps)(
     }
 
     render() {
-      let { error, cards } = this.props,
+      let { error } = this.props,
         loading = this.state.loading;
 
       if (loading) {
