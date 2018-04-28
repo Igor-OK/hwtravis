@@ -5,7 +5,7 @@ import { mainReducer } from "./reducers/mainReducer";
 
 import "./App.css";
 
-// import { Fetch } from "./components/Fetch/Fetch";
+import { Fetch } from "./components/Fetch/Fetch";
 
 function middleware({ dispatch, getState }) {
   return next => action => {
@@ -30,7 +30,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-       <h1>HELLO</h1>
+        <Fetch />
       </Provider>
     );
   }
