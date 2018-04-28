@@ -1,7 +1,7 @@
 import * as React from "react";
 import { connect } from "react-redux";
 
-// import { Columns } from "../Columns/Columns";
+import { Columns } from "../Columns/Columns";
 import { Tags } from "../Tags/Tags";
 import { fetchNext } from "../../actions/fetchNext";
 
@@ -57,7 +57,7 @@ export const Fetch = connect(stateToProps)(
     }
 
     render() {
-      let { error } = this.props,
+      let { error, cards } = this.props,
         loading = this.state.loading;
 
       if (loading) {
@@ -74,7 +74,7 @@ export const Fetch = connect(stateToProps)(
 
       return (
         <React.Fragment>
-         
+          <Columns Items={cards} FetchMore={this.fetchMore} />
           <Tags />
         </React.Fragment>
       );
