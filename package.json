@@ -1,5 +1,6 @@
 {
   "name": "hwtravis",
+  "homepage": "https://Igor-OK.github.io/hwtravis/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
